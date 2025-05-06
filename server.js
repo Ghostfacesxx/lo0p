@@ -10,11 +10,9 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configuração do Supabase
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
-);
+const supabaseUrl = 'https://ipoklsxkgsdtzaosujxh.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 // Middlewares
 app.use(cors());
