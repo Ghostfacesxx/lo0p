@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -64,7 +63,7 @@
     let filteredConteudo = []; // Store filtered content for search and filter
 
     // Pegar a lista do backend
-    fetch('/conteudo')
+    fetch('/.netlify/functions/api/conteudo')
       .then(res => res.json())
       .then(lista => {
         conteudo = lista;
@@ -74,7 +73,7 @@
       });
 
     // Verifica se o usuário está logado
-    fetch('/session-info')
+    fetch('/.netlify/functions/api/session-info')
       .then(res => res.json())
       .then(data => {
         const btn = document.querySelector('.login-btn');

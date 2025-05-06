@@ -1,4 +1,3 @@
-
 <!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
@@ -189,7 +188,7 @@
     if (!id) {
       document.getElementById("detalhe-container").innerHTML = "<p>ID não informado.</p>";
     } else {
-      fetch(`/conteudo/${id}`)
+      fetch(`/.netlify/functions/api/conteudo/${id}`)
         .then(res => res.json())
         .then(data => {
           const container = document.getElementById("detalhe-container");
