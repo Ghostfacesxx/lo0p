@@ -1,3 +1,4 @@
+
 const express = require('express');
 const serverless = require('serverless-http');
 const { createClient } = require('@supabase/supabase-js');
@@ -227,4 +228,3 @@ app.delete('/delete-conteudo/:id', async (req, res) => {
 });
 
 // Exportar a função serverless
-module.exports.handler = serverless(app); 
